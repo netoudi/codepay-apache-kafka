@@ -34,8 +34,8 @@ services:
     command: >
       bash -c
         "sleep 5s &&
-        kafka-topics --create --topic=transactions --if-not-exists --partitions=1 --replication-factor=1 --bootstrap-server=host.docker.internal:9092 &&
-        kafka-topics --create --topic=transactions_result --if-not-exists --partitions=1 --replication-factor=1 --bootstrap-server=host.docker.internal:9092"
+        kafka-topics --create --topic=transactions --if-not-exists --partitions=1 --replication-factor=1 --bootstrap-server=kafka:9092 &&
+        kafka-topics --create --topic=transactions_result --if-not-exists --partitions=1 --replication-factor=1 --bootstrap-server=kafka:9092"
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:6.0.1
