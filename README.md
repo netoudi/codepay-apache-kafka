@@ -30,14 +30,14 @@ kafka-console-producer --bootstrap-server=localhost:9092 --topic=transactions
 kafka-console-consumer --bootstrap-server=localhost:9092 --topic=transactions_result
 ```
 
-## transaction approved
+## transaction approved (credit card valid)
 ```bash
-{"id":"123","account_id":"321","credit_car_number":"4193523830170205","credit_card_name":"John Doe","credit_card_expiration_month":12,"credit_card_expiration_year":2022,"credit_card_cvv":123,"amount":900}
+{"id":"123","account_id":"321","credit_card_number":"4193523830170205","credit_card_name":"John Doe","credit_card_expiration_month":12,"credit_card_expiration_year":2022,"credit_card_cvv":123,"amount":900}
 ```
 
-## transaction rejected
+## transaction rejected (credit card invalid)
 ```bash
-{"id":"123","account_id":"321","credit_car_number":"1111111111111111","credit_card_name":"John Doe","credit_card_expiration_month":12,"credit_card_expiration_year":2022,"credit_card_cvv":123,"amount":1200}
+{"id":"123","account_id":"321","credit_card_number":"1111111111111111","credit_card_name":"John Doe","credit_card_expiration_month":12,"credit_card_expiration_year":2022,"credit_card_cvv":123,"amount":1200}
 ```
 
 ## result approved
